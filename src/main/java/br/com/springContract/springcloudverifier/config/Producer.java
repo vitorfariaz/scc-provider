@@ -9,7 +9,6 @@ public class Producer {
 
     private final KafkaTemplate<String, String> kafkaTemplate;
 
-
     @Value("${cloudkarafka.topic}")
     private String topic;
 

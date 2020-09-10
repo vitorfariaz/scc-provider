@@ -6,7 +6,9 @@ Contract.make {
         triggeredBy("publicarMensagem()")
     }
     outputMessage {
-        sentTo("v13jy9uz-default")
-        body('teste vitor 2')
+        sentTo("topic1")
+        body([
+                foo: "example"
+        ])
     }
 }

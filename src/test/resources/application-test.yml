@@ -1,0 +1,11 @@
+spring:
+  kafka:
+    bootstrap-servers: ${spring.embedded.kafka.brokers}
+    consumer:
+      properties:
+        "key.serializer": "org.springframework.kafka.support.serializer.StringSerializer"
+        "key.deserializer": "org.springframework.kafka.support.serializer.StringDeserializer"
+      group-id: groupId
+
+cloudkarafka:
+  topic: "v13jy9uz-default"
