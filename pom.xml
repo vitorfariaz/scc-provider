@@ -95,7 +95,7 @@
 				<extensions>true</extensions>
 				<configuration>
 					<testFramework>JUNIT5</testFramework>
-					<baseClassForTests>br.com.springContract.springcloudverifier.BaseTestClaxx</baseClassForTests>
+					<baseClassForTests>br.com.springContract.springcloudverifier.BaseTest</baseClassForTests>
 				</configuration>
 			</plugin>
 			<plugin>

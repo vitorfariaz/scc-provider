@@ -11,11 +11,10 @@ import org.springframework.cloud.contract.verifier.messaging.boot.AutoConfigureM
 import org.springframework.kafka.test.context.EmbeddedKafka;
 import org.springframework.test.context.ActiveProfiles;
 
-@SpringBootTest(classes =SpringCloudVerifierApplication.class )
+@SpringBootTest
 @AutoConfigureMessageVerifier
 @EmbeddedKafka(partitions = 1, topics = {"v13jy9uz-default"})
-@ActiveProfiles("test")
-public class BaseTestClaxx {
+public class BaseTest {
 
     @Autowired
     private Producer producer;
