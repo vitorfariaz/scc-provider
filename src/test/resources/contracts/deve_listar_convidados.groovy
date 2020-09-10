@@ -12,7 +12,8 @@ Contract.make{
         headers {
             contentType applicationJson()
         }
-        body([[
+        body([
+              [
                   nome: "Vitor",
                   email: "vitinho@test.com",
                   telefone: $(regex('[0-9]{9}')),
