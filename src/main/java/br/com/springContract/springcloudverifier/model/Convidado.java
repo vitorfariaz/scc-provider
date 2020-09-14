@@ -17,8 +17,8 @@ public class Convidado {
     private Long telefone;
     private Integer idade;
 
-    @JsonFormat(shape = JsonFormat.Shape.STRING,pattern = "dd-MM-yyyy")
-    private LocalDate anoNascimento;
+    @JsonFormat(shape = JsonFormat.Shape.STRING,pattern = "yyyy-MM-dd")
+    private LocalDate dataNascimento;
     private Endereco endereco;
 
     public Convidado() {
@@ -29,17 +29,17 @@ public class Convidado {
         this.email = "email@vitinho";
         this.telefone = 5544332233L;
         this.idade =  20;
-        this.anoNascimento = LocalDate.now();
+        this.dataNascimento = LocalDate.now();
         this.endereco = new Endereco("bakerStreet", 123);
     }
 
-    public Convidado(String nome, String email, Long telefone, Integer idade, Endereco endereco, LocalDate anoNascimento) {
+    public Convidado(String nome, String email, Long telefone, Integer idade, Endereco endereco, LocalDate dataNascimento) {
         this.nome = nome;
         this.email = email;
         this.telefone = telefone;
         this.idade =  idade;
         this.endereco = endereco;
-        this.anoNascimento = anoNascimento;
+        this.dataNascimento = dataNascimento;
     }
 }
 
