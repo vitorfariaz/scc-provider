@@ -4,7 +4,7 @@ Contract.make{
 
     request {
         method 'GET'
-        url '/todosConvidados'
+        url '/allGuests'
     }
 
     response {
@@ -14,16 +14,16 @@ Contract.make{
         }
         body([
               [
-                  nome: "Vitor",
+                  name: "Vitor",
                   email: "vitinho@test.com",
-                  telefone: $(regex('[0-9]{9}')),
-                  idade: "13"
+                  phone: $(regex('[0-9]{9}')),
+                  age: "13"
               ],
               [
-                  nome: "Vitor2",
+                  name: "Vitor2",
                   email: "vitinho2@test.com",
-                  telefone: $(regex('[0-9]{9}')),
-                  idade: "11"
+                  phone: $(regex('[0-9]{9}')),
+                  age: "11"
               ]
         ]
         )

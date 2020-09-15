@@ -1,9 +1,9 @@
 package br.com.springContract.springcloudverifier;
 
 import br.com.springContract.springcloudverifier.config.Producer;
-import br.com.springContract.springcloudverifier.controller.ConvidadoController;
-import br.com.springContract.springcloudverifier.model.Convidado;
-import br.com.springContract.springcloudverifier.service.ConvidadoService;
+import br.com.springContract.springcloudverifier.controller.GuestController;
+import br.com.springContract.springcloudverifier.model.Guest;
+import br.com.springContract.springcloudverifier.service.GuestService;
 import io.restassured.module.mockmvc.RestAssuredMockMvc;
 import org.junit.jupiter.api.BeforeEach;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,13 +20,13 @@ public class BaseTest {
     private Producer producer;
 
     @BeforeEach
-    public void setupConvidadoService() {
-        RestAssuredMockMvc.standaloneSetup(new ConvidadoController(new ConvidadoService(ConvidadoFactory.build())));
+    public void setupGuestService() {
+        RestAssuredMockMvc.standaloneSetup(new GuestController(new GuestService(GuestFactory.build())));
     }
 
-    public void publicarMensagem(){
-        Convidado convidado = ConvidadoFactory.build().get(0);
-        this.producer.send(convidado);
+    public void publishMessage(){
+        Guest guest = GuestFactory.build().get(0);
+        this.producer.send(guest);
     }
 
 }

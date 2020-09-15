@@ -9,7 +9,7 @@ import lombok.ToString;
 @EqualsAndHashCode
 @ToString
 @AllArgsConstructor
-public class Endereco {
-    private String rua;
-    private Integer numeroCasa;
+public class Address {
+    private String street;
+    private Integer houseNumber;
 }
