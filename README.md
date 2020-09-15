@@ -67,10 +67,10 @@ After that, follow the steps
 
 If everything goes with success till here,  the spring cloud contract verifier should have generated some artifacts in your target
 
-**The auto generated tests**
-```target/generated-test-sources/contract/br.com.springContract.springcloudverifier/ContractVerifierTest```
+**The auto generated tests** <br />
+```target/generated-test-sources/contract/br.com.springContract.springcloudverifier/ContractVerifierTest``` <br /> <br />
 
-**The stubs for the services contracts**
+**The stubs for the services contracts** <br />
 ```target/stubs/META-INF/br.com.springContract/spring-cloud-verifier-provider/0.02-SNAPSHOT/mappings``` <br />
 ```target/spring-cloud-verifier-provider-0.02-SNAPSHOT-stubs.jar```
 
