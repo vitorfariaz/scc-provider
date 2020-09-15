@@ -3,11 +3,11 @@ This project contains the provider side of an api. It determines the contract so
 
 ## About the project
 This api has 2 resources, it is very lean because was done to be able to focus on what matters: the definition and use of the contract.
-To understrand the full example of this poc, is need to download the [consumer-side]( https://github.com/vitorfariaz/scc-consumer) that consumes the contract that is provide by this project, but this project can be run a part.
+To understrand the full example of this poc, is need to download the [consumer-side]( https://github.com/vitorfariaz/scc-consumer) that consumes the contract that is provide by this project, but this project can be runned a part.
 
 
 ## Resources
-**GET:** /allGuests
+#### GET: /allGuests
 Return a list of objects of type Guest
 Example of response:
 ```
@@ -26,10 +26,10 @@ Example of response:
 ]
 ```
 
-When starting the application you will not have any Guest registered, for that, you can use the resource ```/publish```  below.
+When starting the application you will not have any Guest registered, for that, you can use the resource ```/publish```  below. <br />
 
 
-**POST**: /publish/{guestName}
+#### POST: /publish/{guestName} 
 Publish a message on a Kafka topic and register a Guest in memory, which can be consulted in the resource above ```/allGuests```
 Note: we think it simpler to create the Guest object through the api and only allow the user to pass the guestName instead of passing the entire Guest object in the request body.
 
