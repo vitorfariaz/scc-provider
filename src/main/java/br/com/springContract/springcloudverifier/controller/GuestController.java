@@ -36,6 +36,7 @@ public class GuestController {
     public ResponseEntity<Guest> publishMessage(@PathVariable String guestName){
         Guest guest = new Guest(guestName);
         producer.send(guest);
+        guestService.getAllGuests().add(guest);
         return ResponseEntity.status(HttpStatus.CREATED).body(guest);
     }
 }

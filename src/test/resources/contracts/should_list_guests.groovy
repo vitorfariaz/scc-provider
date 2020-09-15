@@ -16,14 +16,24 @@ Contract.make{
               [
                   name: "Vitor",
                   email: "vitinho@test.com",
-                  phone: $(regex('[0-9]{9}')),
-                  age: "13"
+                  phone: $(regex('[0-9]{8,9}')),
+                  age: $(anyPositiveInt()),
+                  birthDate: $(anyDate()),
+                      address: [
+                              street: $(regex('.{1,50}')),
+                              houseNumber: $(anyPositiveInt())
+                      ]
               ],
               [
                   name: "Vitor2",
                   email: "vitinho2@test.com",
-                  phone: $(regex('[0-9]{9}')),
-                  age: "11"
+                  phone: $(regex('[0-9]{8,9}')),
+                  age: $(anyPositiveInt()),
+                  birthDate: $(anyDate()),
+                  address: [
+                          street: $(regex('.{1,50}')),
+                          houseNumber: $(anyPositiveInt())
+                  ]
               ]
         ]
         )
