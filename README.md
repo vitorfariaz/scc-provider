@@ -71,7 +71,7 @@ If everything goes with success till here,  the spring cloud contract verifier s
 ```target/generated-test-sources/contract/br.com.springContract.springcloudverifier/ContractVerifierTest```
 
 **The stubs for the services contracts**
-```target/stubs/META-INF/br.com.springContract/spring-cloud-verifier-provider/0.02-SNAPSHOT/mappings```
+```target/stubs/META-INF/br.com.springContract/spring-cloud-verifier-provider/0.02-SNAPSHOT/mappings``` <br />
 ```target/spring-cloud-verifier-provider-0.02-SNAPSHOT-stubs.jar```
 
 
