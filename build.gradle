@@ -1,0 +1,43 @@
+plugins {
+    id 'org.springframework.boot' version '2.3.3.RELEASE'
+    id "io.spring.dependency-management" version "1.0.9.RELEASE"
+    id "org.springframework.cloud.contract" version "2.2.4.RELEASE"
+    id 'java'
+    id 'maven-publish'
+}
+
+group = 'br.com.springContract'
+version = '0.02-SNAPSHOT'
+description = 'spring-cloud-verifier-provider'
+sourceCompatibility = JavaVersion.VERSION_11
+
+contracts {
+    baseClassForTests = "br.com.springContract.springcloudverifier.BaseTest"
+    testFramework = 'JUNIT5'
+    testMode = 'MockMvc'
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.projectlombok:lombok:1.18.12'
+    annotationProcessor 'org.projectlombok:lombok:1.18.12'
+    implementation 'org.springframework.kafka:spring-kafka:2.5.5.RELEASE'
+    implementation 'com.fasterxml.jackson.module:jackson-module-kotlin:2.11.2'
+    implementation 'org.springframework.boot:spring-boot-starter-web:2.3.3.RELEASE'
+    implementation 'org.springframework.cloud:spring-cloud-starter-contract-verifier:2.2.4.RELEASE'
+    runtimeOnly 'org.springframework.boot:spring-boot-devtools:2.3.3.RELEASE'
+    testImplementation 'org.springframework.kafka:spring-kafka-test:2.5.5.RELEASE'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test:2.3.3.RELEASE'
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+test {
+    useJUnitPlatform()
+}
