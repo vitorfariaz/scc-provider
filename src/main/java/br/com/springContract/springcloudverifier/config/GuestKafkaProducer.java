@@ -5,14 +5,14 @@ import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Producer {
+public class GuestKafkaProducer {
 
     private final KafkaTemplate<String, Object> kafkaTemplate;
 
     @Value("${cloudkarafka.topic}")
     private String topic;
 
-    Producer(KafkaTemplate<String, Object> kafkaTemplate) {
+    GuestKafkaProducer(KafkaTemplate<String, Object> kafkaTemplate) {
         this.kafkaTemplate = kafkaTemplate;
     }
 
