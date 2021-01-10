@@ -42,7 +42,7 @@ Response Exemple:
 ```
 HTTP STATUS : 201 CREATED
 {
-    "name": "vitinho6",
+    "name": "Kevin",
     "email": "email@vitinho",
     "phone": 5544332233,
     "age": 20,
