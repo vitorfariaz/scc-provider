@@ -4,7 +4,7 @@ Contract.make{
 
     request {
         method 'GET'
-        url '/allGuests'
+        url '/guests'
     }
 
     response {

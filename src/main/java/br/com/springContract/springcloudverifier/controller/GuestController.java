@@ -1,7 +1,7 @@
 package br.com.springContract.springcloudverifier.controller;
 
 
-import br.com.springContract.springcloudverifier.config.Producer;
+import br.com.springContract.springcloudverifier.config.GuestKafkaProducer;
 import br.com.springContract.springcloudverifier.model.Guest;
 import br.com.springContract.springcloudverifier.service.GuestService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,13 +21,13 @@ public class GuestController {
     private GuestService guestService;
 
     @Autowired
-    private Producer producer;
+    private GuestKafkaProducer guestKafkaProducer;
 
     public GuestController(GuestService guestService) {
         this.guestService = guestService;
     }
 
-    @GetMapping("/allGuests")
+    @GetMapping("/guests")
     public List<Guest> allGuests(){
         return guestService.getAllGuests();
     }
@@ -35,7 +35,7 @@ public class GuestController {
     @PostMapping("/publish/{guestName}")
     public ResponseEntity<Guest> publishMessage(@PathVariable String guestName){
         Guest guest = new Guest(guestName);
-        producer.send(guest);
+        guestKafkaProducer.send(guest);
         guestService.getAllGuests().add(guest);
         return ResponseEntity.status(HttpStatus.CREATED).body(guest);
     }

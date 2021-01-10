@@ -1,6 +1,6 @@
 package br.com.springContract.springcloudverifier;
 
-import br.com.springContract.springcloudverifier.config.Producer;
+import br.com.springContract.springcloudverifier.config.GuestKafkaProducer;
 import br.com.springContract.springcloudverifier.controller.GuestController;
 import br.com.springContract.springcloudverifier.model.Guest;
 import br.com.springContract.springcloudverifier.service.GuestService;
@@ -17,7 +17,7 @@ import org.springframework.kafka.test.context.EmbeddedKafka;
 public class BaseTest {
 
     @Autowired
-    private Producer producer;
+    private GuestKafkaProducer guestKafkaProducer;
 
     @BeforeEach
     public void setupGuestService() {
@@ -26,7 +26,7 @@ public class BaseTest {
 
     public void publishMessage(){
         Guest guest = GuestFactory.build().get(0);
-        this.producer.send(guest);
+        this.guestKafkaProducer.send(guest);
     }
 
 }
