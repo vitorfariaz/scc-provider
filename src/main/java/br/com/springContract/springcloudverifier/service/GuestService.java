@@ -14,7 +14,4 @@ public class GuestService {
         return guests;
     }
 
-    public GuestService(List<Guest> guests) {
-        this.guests = guests;
-    }
 }
