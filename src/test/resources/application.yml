@@ -1,0 +1,11 @@
+# KAFKA
+spring:
+  kafka:
+    bootstrap-servers: ${spring.embedded.kafka.brokers}
+    consumer:
+      group-id: v13jy9uz-consumers
+    producer:
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
+cloudkarafka:
+  topic: v13jy9uz-default

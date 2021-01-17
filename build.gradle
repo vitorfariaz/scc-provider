@@ -32,6 +32,8 @@ dependencies {
     runtimeOnly 'org.springframework.boot:spring-boot-devtools:2.3.3.RELEASE'
     testImplementation 'org.springframework.kafka:spring-kafka-test:2.5.5.RELEASE'
     testImplementation 'org.springframework.boot:spring-boot-starter-test:2.3.3.RELEASE'
+    testImplementation 'org.mockito:mockito-junit-jupiter:3.6.0'
+
 }
 
 tasks.withType(JavaCompile) {
